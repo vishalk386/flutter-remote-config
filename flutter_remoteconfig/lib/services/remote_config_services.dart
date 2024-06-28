@@ -45,14 +45,13 @@ Future<FirebaseRemoteConfig> setupRemoteConfig() async {
             Get.changeTheme(ThemeData.dark().copyWith(
               appBarTheme: AppBarTheme(color: Color(themeDataModel.appbarColor)),
               primaryColor: Color(themeDataModel.primaryColor),
-              bottomAppBarColor: Color(themeDataModel.primaryColor),
               textTheme:  const TextTheme(
-                bodyText1: TextStyle(),
-                bodyText2: TextStyle(),
+                bodyLarge: TextStyle(),
+                bodyMedium: TextStyle(),
               ).apply(
                 bodyColor: Color(themeDataModel.primaryColor),
                 displayColor: Color(themeDataModel.backgroundColor),
-              ),
+              ), bottomAppBarTheme: BottomAppBarTheme(color: Color(themeDataModel.primaryColor)),
             ));
           }
           break;
@@ -62,14 +61,13 @@ Future<FirebaseRemoteConfig> setupRemoteConfig() async {
             Get.changeTheme(ThemeData.light().copyWith(
               appBarTheme: AppBarTheme(color: Color(themeDataModel.primaryColor)),
               primaryColor: Color(themeDataModel.primaryColor),
-              bottomAppBarColor: Color(themeDataModel.primaryColor),
               textTheme: const TextTheme(
-                bodyText1: TextStyle(),
-                bodyText2: TextStyle(),
+                bodyLarge: TextStyle(),
+                bodyMedium: TextStyle(),
               ).apply(
                 bodyColor: Color(themeDataModel.primaryColorDark),
                 displayColor: Color(themeDataModel.primaryColorDark),
-              ),
+              ), bottomAppBarTheme: BottomAppBarTheme(color: Color(themeDataModel.primaryColor)),
             ));
           }
           break;
